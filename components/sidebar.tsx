@@ -17,8 +17,41 @@ import {
     MdSearch,
     MdLibraryMusic,
     MdLibraryAdd,
-    MdFavorite
+    MdFavorite,
+    MdPlaylistAdd
 } from 'react-icons/md'
+
+const navMenu = [
+    {
+      name: 'Home',
+      icon: MdHome,
+      route: '/',
+    },
+    {
+      name: 'Search',
+      icon: MdSearch,
+      route: '/search',
+    },
+    {
+      name: 'Your Library',
+      icon: MdLibraryMusic,
+      route: '/library',
+    },
+  ]
+  
+  const musicMenu = [
+    {
+      name: 'Create Playlist',
+      icon: MdPlaylistAdd,
+      route: '/',
+    },
+    {
+      name: 'Favorites',
+      icon: MdFavorite,
+      route: '/favorites',
+    },
+  ]
+
 const Sidebar = () => {
     return (
         <Box 
@@ -29,8 +62,9 @@ const Sidebar = () => {
             color='gray'
         >
             <Box paddingY='20px'>
-                <Box width='120px' marginBottom='20px' paddingX='20px'>
-                    <NextImage src='/vercel.svg' height={60} width={120} alt='' />
+                <Box width='120px' marginBottom='20px' paddingX='20px' display="flex">
+                    <NextImage src='/headphones.svg' height={30} width={60} alt='' />
+                    <Box>Music Tracks</Box>
                 </Box>
             </Box>
         </Box>
