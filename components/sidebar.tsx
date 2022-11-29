@@ -112,7 +112,9 @@ const Sidebar = () => {
                         {playlists.map(playlist => (
                             <ListItem paddingX='20px' fontSize='16px' key={playlist}>
                                 <LinkBox>
-                                    <NextLink href='/'>{playlist}</NextLink>
+                                    <NextLink href='/'>
+                                        <LinkOverlay>{playlist}</LinkOverlay>
+                                    </NextLink>
                                 </LinkBox>
                             </ListItem>
                         ))}
